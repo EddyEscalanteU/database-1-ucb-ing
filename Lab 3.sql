@@ -12,7 +12,7 @@ SELECT NOMBRE_COMPLETO, GENERO
 FROM ESTUDIANTES
 WHERE GENERO = 'F'
 
---Obtener los estudiantes femeninos con mayoria de edad
+--Obtener los estudiantes masculino con mayoria de edad
 SELECT NOMBRE_COMPLETO, GENERO, EDAD
 FROM ESTUDIANTES
-WHERE 
+WHERE GENERO = 'M' and EDAD >= 18
