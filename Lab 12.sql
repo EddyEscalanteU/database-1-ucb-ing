@@ -28,3 +28,21 @@ insert into Customers values
 (3,	'Antonio Moreno Taquería', 'Antonio Moreno', 'Mexico')
 
 select * from Customers
+
+
+
+
+
+CREATE VIEW customer_from_mexico AS
+select * from Customers c
+where c.Country = 'Mexico'
+
+
+select * from customer_from_mexico
+
+
+create view SQL_INNER_JOIN as
+SELECT Customers.*
+FROM Orders
+INNER JOIN Customers
+ON Orders.CustomerID=Customers.CustomerID;
