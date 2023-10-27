@@ -37,3 +37,55 @@ FROM PRODUCT_COMPLETE
 
 
 
+-----------------
+
+
+
+--SELECT *
+--FROM [NOMBRE_TABLA]
+--
+SELECT ProductID, Name, ProductNumber, Color 
+FROM SalesLT.Product
+--
+SELECT Name, ProductCategoryID
+FROM SalesLT.Product
+--
+SELECT *
+FROM SalesLT.ProductCategory
+--
+SELECT 
+PRO.Name, 
+PRO.ProductCategoryID, 
+CAT.Name
+FROM SalesLT.Product PRO, SalesLT.ProductCategory CAT
+WHERE 
+PRO.ProductCategoryID = CAT.ProductCategoryID
+and
+PRO.ProductCategoryID > 10 
+and
+PRO.ProductCategoryID <> 41
+
+
+
+
+--
+SELECT 
+PC.ProductCategoryID, 
+PC.ParentProductCategoryID,
+PC.Name
+FROM SalesLT.ProductCategory PC
+WHERE PC.ProductCategoryID = (
+	PC.ParentProductCategoryID
+)
+
+
+
+
+
+
+
+
+
+
+
+
